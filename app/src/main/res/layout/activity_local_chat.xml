@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.noriter.bobpul.Activity.MainActivity">
+
+    //상단
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <fragment
+            android:id="@+id/frmTopBar"
+            android:name="com.noriter.bobpul.Activity.TopBarFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    //하단
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:orientation="vertical">
+
+        //위쪽 공백
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5">
+        </LinearLayout>
+
+        //GPS레이아웃
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            //gps검색 레이아웃
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="@drawable/report_border">
+
+                //왼쪽 공백
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                </LinearLayout>
+
+                //gps이미지 레이아웃 이미지뷰로 바꾸기
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/report_border">
+                </LinearLayout>
+
+                //위치 입력 레이아웃
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:background="@drawable/report_border">
+
+                    //위치 입력
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/edtChatGPSSearch"/>
+                </LinearLayout>
+
+                //오른쪽 공백
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                </LinearLayout>
+
+                //돋보기 레이아웃
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                </LinearLayout>
+            </LinearLayout>
+
+            //위치변경 레이아웃
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                //왼쪽공백
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    //이미지버튼으로
+                </LinearLayout>
+
+                //-값 레이아웃
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                </LinearLayout>
+
+                //반경~~ 위치검색 글씨
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="반경 n km위치 검색"/>
+                </LinearLayout>
+
+                //오른쪽 공백
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                </LinearLayout>
+
+                //+값 레이아웃
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        //방찾기 옵션레이아웃
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:background="@drawable/report_border">
+
+            //연령 레이아웃 (스피너로 만들거임)
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+
+                //연령 스피너
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/sLocalChatAge"
+                    android:entries="@array/chatAge">
+                </Spinner>
+            </LinearLayout>
+
+            //성별 레이아웃 (스피너로 만들거임)
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+
+                //성별 스피너
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/sLocalChatGender"
+                    android:entries="@array/chatGender">
+                </Spinner>
+            </LinearLayout>
+
+            //공백
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+            </LinearLayout>
+
+            //방만들기 레이아웃
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+
+                //방만들기 버튼
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="방만들기"
+                    android:id="@+id/btnLocalChatCreate"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        //채팅방 메뉴레이아웃
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/report_border">
+
+            //채팅방 제목 글씨 레이아웃
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+
+                //채팅방 제목 글씨
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="채팅방 제목"/>
+            </LinearLayout>
+
+            //현재, 전체 글씨 레이아웃
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                //현재, 전체 글씨
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="현재/전체"/>
+            </LinearLayout>
+
+            //입장 글씨레이아웃
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                //입장 글씨
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="입장"
+                    android:gravity="center"
+                    android:id="@+id/tvLocalChatEnter"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        //리스트뷰 이용한 채팅방목록 레이아웃
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6">
+
+            //채팅방목록
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/lvLocalChatList">
+            </ListView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.noriter.bobpul.Activity.MainActivity">
+
+    //상단
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <fragment
+            android:id="@+id/frmTopBar"
+            android:name="com.noriter.bobpul.Activity.TopBarFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    //하단
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:orientation="vertical">
+
+
+        //본문 레이아웃
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="16"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6"
+                android:orientation="vertical">
+
+                //일시 레이아웃
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    //일시 글씨
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="일시" />
+
+                    </LinearLayout>
+                    //일시 입력
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8"
+                        android:orientation="horizontal">
+
+                        //월 레이아웃
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <Spinner
+                                android:id="@+id/sDateMonth"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:entries="@array/dateMonth"
+                                android:gravity="center"></Spinner>
+                        </LinearLayout>
+
+                        //일 레이아웃
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <Spinner
+                                android:id="@+id/sDateDay"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:entries="@array/dateDay"
+                                android:gravity="center"></Spinner>
+                        </LinearLayout>
+
+                        //오른쪽 공백
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"></LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                //장소 레이아웃
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    //장소 글씨
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="장소" />
+                    </LinearLayout>
+                    //장소 입력
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8">
+
+                        <EditText
+                            android:id="@+id/edtResInfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="8"
+                            android:hint="Ex) 서울시 마포구" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                ----
+                //모임명 레이아웃
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    //모임명 글씨
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="모임명" />
+                    </LinearLayout>
+                    //모임별명 입력
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8">
+
+                        <EditText
+                            android:id="@+id/edtMeetingAlias"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="8"
+                            android:hint="최대6글자"
+                            android:maxLength="6" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                //금액 레이아웃
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    //금액 글씨
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="금액" />
+                    </LinearLayout>
+                    //금액 입력
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8">
+
+                        <EditText
+                            android:id="@+id/edtPriceInput"
+                            android:layout_width="match_parent"
+                            android:inputType="number"
+                            android:layout_height="match_parent"
+                            android:layout_weight="8" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                //인원설정 레이아웃
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    //인원설정 글씨
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="인원설정" />
+
+                    </LinearLayout>
+
+                    //최소인원 글씨
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="최소" />
+                    </LinearLayout>
+
+                    //최소인원 설정 스피너
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2">
+
+                        <Spinner
+                            android:id="@+id/sBoardMinCount"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:entries="@array/min"></Spinner>
+                    </LinearLayout>
+
+                    //최소인원 입력되는칸
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tvBoardMin"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center" />
+
+                    </LinearLayout>
+                    //최대인원 글씨
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="left|center"
+                            android:text="최대" />
+                    </LinearLayout>
+
+                    //최대인원 설정 스피너
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2">
+
+                        <Spinner
+                            android:id="@+id/sBoardMaxCount"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:entries="@array/max"></Spinner>
+                    </LinearLayout>
+
+                    //최대인원 입력되는칸
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tvBoardMax"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    //등록 레이아웃
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:orientation="horizontal">
+
+        //왼쪽공백
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"></LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+
+                <ImageButton
+                    android:id="@+id/imbBoardWritePrev"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="0dp"
+                    android:src="@drawable/ic_launcher"
+                    android:text="이전" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"></LinearLayout>
+
+        //등록버튼
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <ImageButton
+                android:id="@+id/imbBoardWriteCom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="0dp"
+                android:src="@drawable/ic_launcher"
+                android:text="등록" />
+        </LinearLayout>
+        //오른쪽공백
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"></LinearLayout>
+    </LinearLayout>
+</LinearLayout>

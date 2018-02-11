@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.noriter.bobpul.Activity.MainActivity">
+
+    //상단
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:orientation="vertical">
+
+
+        //위쪽 공백
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"></LinearLayout>
+
+        //후기작성 레이아웃
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:orientation="horizontal">
+
+            //왼쪽 공백
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"></LinearLayout>
+
+            //진짜 후기작성
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="8"
+                android:background="@drawable/report_border"
+                android:orientation="vertical">
+
+                //식당명 레이아웃
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    //식당명
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="식당명" />
+
+                    //진짜 식당이름 이거는 밥풀측에서 미리 작성해주는거임
+
+                    <TextView
+                        android:id="@+id/tvRestaurantName"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="6"
+                        android:text="통큰갈비"
+                        android:textSize="30sp" />
+                </LinearLayout>
+
+                //별점 레이아웃
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.5">
+
+                    <!--//별점주기, 나중에 이거 이미지뷰로 바꿔야하나-->
+                    <!--<TextView-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_weight="6"-->
+                    <!--android:id="@+id/tvRestaurantScore"/>-->
+                    <RatingBar
+                        android:id="@+id/ratingbar2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:isIndicator="false"
+                        android:max="5"
+                        android:numStars="5"
+                        android:rating="0"
+                        android:stepSize="0.5" />
+                </LinearLayout>
+
+                //내용 레이아웃
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="6">
+
+                    <EditText
+                        android:id="@+id/edtBoardContext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="사실만을 작성해주세요!!" />
+                </LinearLayout>
+            </LinearLayout>
+
+            //오른쪽 공백
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"></LinearLayout>
+        </LinearLayout>
+
+        //후기작성 레이아웃의 아래쪽 공백
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"></LinearLayout>
+
+        //확인버튼 레이아웃
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            //왼쪽 공백
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"></LinearLayout>
+
+            //확인버튼 레이아웃
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+
+                <Button
+                    android:id="@+id/btnMeetingAfterConfirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button"
+                    android:text="확인" />
+            </LinearLayout>
+
+            //오른쪽 공백
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"></LinearLayout>
+        </LinearLayout>
+
+        //확인버튼의 아래쪽 공백
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"></LinearLayout>
+    </LinearLayout>
+
+
+
+    //하단
+
+</LinearLayout>

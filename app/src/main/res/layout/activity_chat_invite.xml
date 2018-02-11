@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.noriter.bobpul.Activity.MainActivity">
+
+    //상단
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <fragment
+            android:id="@+id/frmTopBar"
+            android:name="com.noriter.bobpul.Activity.TopBarFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    //하단
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:orientation="vertical">
+
+        //현재위치 레이아웃
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/report_border">
+
+            //현재위치 값
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:id="@+id/tvCurrentGPS"/>
+        </LinearLayout>
+
+        //반경 레이아웃
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:background="@drawable/report_border">
+
+            //-값 레이아웃
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+            </LinearLayout>
+
+            //반경~~ 내 유저 글씨 레이아웃
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="8">
+
+                //반경~~ 내 유저 글씨
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="반경 nkm내 유저"/>
+            </LinearLayout>
+
+            //+값 레이아웃
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+            </LinearLayout>
+        </LinearLayout>
+
+        //옵션 레이아웃
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:background="@drawable/report_border">
+
+            //연령 레이아웃(스피너로 바꿔서 구현할것임)
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/report_border">
+
+                //연령 스피너
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/sLocalChatAge"
+                    android:entries="@array/chatAge">
+                </Spinner>
+            </LinearLayout>
+
+            //성별 레이아웃(스피너로 바꿔서 구현할것임)
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/report_border">
+
+                //성별 스피너
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/sLocalChatGender"
+                    android:entries="@array/chatGender">
+                </Spinner>
+            </LinearLayout>
+
+            //오른쪽 공백
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3">
+            </LinearLayout>
+        </LinearLayout>
+
+        //정보들 레이아웃
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:background="@drawable/report_border">
+
+            //프사글씨 레이아웃
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/report_border">
+
+                //프사글씨
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="프로필사진"/>
+            </LinearLayout>
+
+            //닉네임 글씨 레이아웃
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/report_border">
+
+                //닉네임 글씨
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="닉네임"/>
+            </LinearLayout>
+
+            //나이 글씨 레이아웃
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/report_border">
+
+                //나이 글씨
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="나이" />
+            </LinearLayout>
+
+            //초대 글씨 레이아웃
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/report_border">
+
+                //초대 글씨
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="초대"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        //리스트뷰로 구현할 사람들목록
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4">
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/lvChatInvite">
+            </ListView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

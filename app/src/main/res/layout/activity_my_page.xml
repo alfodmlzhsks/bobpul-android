@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.noriter.bobpul.Activity.MainActivity">
+
+    //상단
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <fragment
+            android:id="@+id/frmTopBar"
+            android:name="com.noriter.bobpul.Activity.TopBarFragment"
+            android:layout_width="match_parent"
+            tools:layout="@layout/activity_top_bar"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    //하단
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:orientation="vertical">
+
+        //마이페이지 메뉴레이아웃
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:layout_margin="10dp">
+
+            //모임일정
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnMeetingSch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text="모임일정" />
+            </LinearLayout>
+
+
+            //잔액확인
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnRestPriceInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text="잔액확인" />
+            </LinearLayout>
+
+
+            //정보수정
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnInfoUpdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text="정보수정" />
+            </LinearLayout>
+
+
+            //나머지 메뉴들 추가할거있으면 이거 레이아웃쪼개서 사용하기
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"></LinearLayout>
+        </LinearLayout>
+
+        //설명문 레이아웃
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            //색깔넣어서 강조하기
+            //설명1
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="(식사 후 꼭 확인증을 눌러주세요)" />
+
+            //설명2, 설명서 글씨에 설명서 링크
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="(처음 이용자는 설명서 꼭 참고!!)" />
+        </LinearLayout>
+
+        //모임명 확인증 글씨 레이아웃
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:background="#f0bf9e"
+            android:orientation="horizontal">
+
+            //모임명
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4">
+
+                //모임명 글씨
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="모임명" />
+            </LinearLayout>
+
+            //오른쪽공백
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"></LinearLayout>
+
+            //확인증
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+
+                //확인증 글씨
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="확인증" />
+            </LinearLayout>
+
+            //후기작성가능 여부
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+
+                //후기작성가능여부 글씨
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="후기권한" />
+            </LinearLayout>
+        </LinearLayout>
+
+        //리스트뷰로 계속 보여줄 모임명, 확인증
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3">
+
+           <ListView
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:id="@+id/lvMypage">
+
+           </ListView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

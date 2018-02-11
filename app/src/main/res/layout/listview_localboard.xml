@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/report_border"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:orientation="horizontal">
+
+        //왼쪽공백
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"></LinearLayout>
+
+        //사진레이아웃
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            //대표로고
+
+            <ImageView
+                android:id="@+id/ivLocalBoardLogo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_launcher" />
+        </LinearLayout>
+
+        //오른쪽 공백
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"></LinearLayout>
+
+        //내용 레이아웃
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:orientation="vertical">
+
+            //닉네임 등급 글씨 레이아웃
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/report_border"
+                android:orientation="horizontal">
+
+                //닉네임 글씨
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="닉네임" />
+                </LinearLayout>
+
+                //등급 글씨
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="등급" />
+                </LinearLayout>
+            </LinearLayout>
+
+            //닉네임.등급 레이아웃
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/report_border"
+                android:orientation="horizontal">
+
+                //닉네임 레이아웃
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    //닉네임
+
+                    <TextView
+                        android:id="@+id/tvLocalBoardName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center" />
+                </LinearLayout>
+
+                //등급 레이아웃
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    //등급
+
+                    <TextView
+                        android:id="@+id/tvLocalBoardRank"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center" />
+                </LinearLayout>
+            </LinearLayout>
+
+            //제목레이아웃
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                //제목
+
+                <TextView
+                    android:id="@+id/tvLocalBoardTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            //월 레이아웃
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                //일시
+
+                <TextView
+                    android:id="@+id/tvLocalBoardMonth"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"></LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"></LinearLayout>
+    <!--//제목-->
+    <!--<TextView-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="2"-->
+    <!--android:gravity="center"-->
+    <!--android:id="@+id/tvLocalBoardTitle"/>-->
+
+
+    <!--//등급-->
+    <!--<TextView-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="2"-->
+    <!--android:gravity="center"-->
+    <!--android:id="@+id/tvLocalBoardRank"/>-->
+
+    <!--//닉네임-->
+    <!--<TextView-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="2"-->
+    <!--android:gravity="center"-->
+    <!--android:id="@+id/tvLocalBoardName"/>-->
+
+    <!--//등록일 마감일 레이아웃-->
+    <!--<LinearLayout-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="2"-->
+    <!--android:orientation="vertical">-->
+
+    <!--//등록일-->
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:textSize="6pt"-->
+    <!--android:gravity="center"-->
+    <!--android:id="@+id/tvLocalBoardExpire_U"/>-->
+
+    <!--//마감일-->
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:textSize="6pt"-->
+    <!--android:gravity="center"-->
+    <!--android:id="@+id/tvLocalBoardExpire_D"/>-->
+    <!--</LinearLayout>-->
+
+
+    <!--//입장-->
+    <!--<Button-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="2"-->
+    <!--android:text="입장"-->
+    <!--android:id="@+id/btnLocalBoardEnter"/>-->
+</LinearLayout>

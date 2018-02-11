@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.noriter.bobpul.Activity.MainActivity"
+    android:background="#EFEBEA">
+
+    //상단
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/fragment_container"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <fragment
+            android:id="@id/frmTopBar"
+            android:name="com.noriter.bobpul.Activity.TopBarFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/activity_top_bar" />
+
+    </FrameLayout>
+
+    //하단
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:orientation="vertical">
+
+        //공백
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"></LinearLayout>
+
+        //정보입력 레이아웃
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:orientation="vertical">
+
+            //아이디 레이아웃
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                //왼쪽 공백
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"></LinearLayout>
+
+                //아이디 글씨 레이아웃
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="아이디" />
+                </LinearLayout>
+
+                //아이디 입력칸 레이아웃
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:padding="10dp">
+
+                    //아이디 입력칸
+
+                    <EditText
+                        android:id="@+id/edtRegIdInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/register" />
+                </LinearLayout>
+
+                //중복체크 레이아웃
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <Button
+                        android:id="@+id/btnRegIdCheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/button"
+                        android:layout_gravity="left"
+                        android:text="중복검색"
+                        android:padding="0dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            //비밀번호 레이아웃
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                //왼쪽 공백
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"></LinearLayout>
+
+                //비밀번호 글씨 레이아웃
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="비밀번호" />
+                </LinearLayout>
+
+                //비밀번호 입력칸 레이아웃
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:padding="10dp">
+
+                    //비밀번호 입력칸
+
+                    <EditText
+                        android:id="@+id/edtRegPWInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/register"/>
+                </LinearLayout>
+
+                //오른쪽 공백
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"></LinearLayout>
+            </LinearLayout>
+
+            //비밀번호 확인레이아웃
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                //왼쪽 공백
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"></LinearLayout>
+
+                //비밀번호확인 글씨 레이아웃
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="비밀번호 확인" />
+                </LinearLayout>
+
+                //비밀번호확인 입력칸 레이아웃
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:padding="10dp">
+
+                    //비밀번호확인 입력칸
+
+                    <EditText
+                        android:id="@+id/edtRegPWInfoAgain"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/register"/>
+                </LinearLayout>
+
+                //오른쪽 공백
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"></LinearLayout>
+            </LinearLayout>
+
+            //생년월일 레이아웃
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                //왼쪽 공백
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"></LinearLayout>
+
+                //생년월일 글씨 레이아웃
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="생년월일" />
+                </LinearLayout>
+
+                //생년월일 입력칸 레이아웃
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:padding="10dp">
+
+                    //생년월일 입력칸
+
+                    <EditText
+                        android:id="@+id/edtRegBirthInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/register"
+                    android:hint="8자리입력(ex:19801125)" />
+                </LinearLayout>
+
+                //오른쪽 공백
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"></LinearLayout>
+            </LinearLayout>
+
+            //거주지역 레이아웃
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                //왼쪽 공백
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"></LinearLayout>
+
+                //거주지역 글씨 레이아웃
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    //거주지역 글씨
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="거주지역" />
+                </LinearLayout>
+
+                //거주지역 입력칸 레이아웃
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:paddingLeft="10dp">
+
+                    //거주지역 입력되는곳
+
+                    <Button
+                        android:id="@+id/btnRegLiveAreaSearch"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/button"
+                        android:text="위치 검색"
+                        android:src="@drawable/placeholder" />
+                </LinearLayout>
+
+                //거주지역 검색
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3">
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            //휴대폰 인증 레이아웃
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                //왼쪽 공백
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"></LinearLayout>
+
+                //휴대폰인증 글씨 레이아웃
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    //휴대폰인증 글씨
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="휴대폰 인증" />
+                </LinearLayout>
+
+                //휴대폰번호 입력칸 레이아웃
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:padding="10dp">
+
+                    //휴대폰번호 입력
+
+                    <EditText
+                        android:id="@+id/edtRegPhoneNumInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/register"/>
+                </LinearLayout>
+
+                //인증번호 전송 레이아웃
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp">
+
+                    <Button
+                        android:id="@+id/btnRegPhoneId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="0dp"
+                        android:text="인증번호 전송"
+                        android:background="@drawable/button"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        //회원가입 버튼 레이아웃
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            //위쪽 공백
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"></LinearLayout>
+
+            //회원가입 버튼구성위한 레이아웃
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:orientation="horizontal">
+
+                //왼쪽 공백
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"></LinearLayout>
+
+                //회원가입 버튼 레이아웃(진짜)
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    //회원가입 버튼
+
+                    <Button
+                        android:id="@+id/btnRegSuccess"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="0dp"
+                        android:text="Join"
+                        android:textSize="20dp"
+                        android:background="@drawable/button"/>
+                </LinearLayout>
+
+                //오른쪽 공백
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"></LinearLayout>
+            </LinearLayout>
+
+            //아래쪽 공백
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"></LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

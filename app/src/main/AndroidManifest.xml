@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.noriter.bobpul">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="밥풀"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Activity.MainActivity" />
+        <activity android:name=".Activity.SettingActivity" />
+        <activity android:name=".Activity.AlertActivity" />
+        <activity android:name=".Activity.VersionActivity" />
+        <activity android:name=".Activity.QAActivity" />
+        <activity android:name=".Activity.LocalBoardActivity" />
+        <activity android:name=".Activity.WriteBoardActivity" />
+        <activity android:name=".Activity.BoardRead_bfActivity"/>
+        <activity android:name=".Activity.CreditSuccessActivity" />
+        <activity android:name=".Activity.MyPageActivity" />
+        <activity android:name=".Activity.ManualActivity" />
+        <activity android:name=".Activity.MeetingAfterActivity" />
+        <activity android:name=".Activity.MeetingAfterSuccessActivity" />
+        <activity android:name=".Activity.RegisterActivity" />
+        <activity android:name=".Activity.RegAddressSearchActivity" />
+        <activity android:name=".Activity.PhoneIDActivity" />
+        <activity android:name=".Activity.ChangePWActivity" />
+        <activity android:name=".Activity.BalanceActivity" />
+        <activity android:name=".Activity.ReturnBalanceActivity" />
+        <activity android:name=".Activity.BalanceReturnReqActivity" />
+        <activity android:name=".Activity.PointActivity" />
+        <activity android:name=".Activity.LocalChatActivity" />
+        <activity android:name=".Activity.LocalChatCreateActivity" />
+        <activity android:name=".Activity.ChatInviteActivity" />
+        <activity android:name=".Activity.PopularChatActivity" />
+        <activity android:name=".Activity.RealMainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.TempPWActivity" />
+        <activity android:name=".Activity.WriteBoardActivity2" />
+        <activity android:name=".Activity.PopularBoardActivity"></activity>
+        <fragment android:name=".Activity.TopBarFragment" />
+        <activity android:name=".Activity.PayActivity"/>
+        <activity android:name=".Activity.Main2Activity"/>
+
+
+        <!---->
+    </application>
+
+</manifest>

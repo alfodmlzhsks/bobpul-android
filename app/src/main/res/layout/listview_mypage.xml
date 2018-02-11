@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        //모임명 버튼레이아웃
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            //모임명버튼, 이 버튼은 후기작성가능여부에서 O일때만 누를수있음
+
+            <Button
+                android:id="@+id/btnMymeetingName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_back"
+        />
+        </LinearLayout>
+
+        //오른쪽공백
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></LinearLayout>
+
+        //확인증
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            //확인증 버튼
+
+            <Button
+                android:id="@+id/btnMymeetingConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_back"
+      />
+        </LinearLayout>
+
+        //후기작성가능 여부
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            //후기작성가능여부 O, X
+
+            <TextView
+                android:id="@+id/tvMymeetingAfter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="X" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

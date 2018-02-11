@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.noriter.bobpul.Activity.MainActivity">
+
+    //상단
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <fragment
+            android:id="@+id/frmTopBar"
+            android:name="com.noriter.bobpul.Activity.TopBarFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/activity_top_bar" />
+
+    </LinearLayout>
+
+    //하단
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            android:orientation="vertical">
+
+            //제목 및 인원레이아웃
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                //제목 레이아웃
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2">
+
+                    //제목글씨
+
+                    <TextView
+                        android:id="@+id/tvboardTitleSpread"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="게시글 제목" />
+                </LinearLayout>
+
+                //인원 레이아웃
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    //공백
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="6"></LinearLayout>
+
+                    //인원
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:orientation="vertical">
+
+                        //현재, 최대 보여주는 레이아웃
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            //현재인원 글씨
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="현재인원" />
+
+                            //최대인원 글씨
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="최대인원" />
+                        </LinearLayout>
+
+                        //현재, 최대 보여줌 숫자로
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvBoardNowSpread"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:text="2"
+                                android:layout_weight="1"
+                                android:gravity="center" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="/" />
+
+                            <TextView
+                                android:id="@+id/tvBoardMaxSpread"
+                                android:layout_width="0dp"
+                                android:text="6"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            //본문보여주는 레이아웃
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6">
+
+                //본문내용
+
+                <TextView
+                    android:id="@+id/tvBoardCenterSpread"
+                    android:layout_width="match_parent"
+                    android:text="경기도 시흥시에 있는 통큰갈비로 가는거 어때요?"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+            //밑에 정보들 레이아웃
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:orientation="vertical">
+
+                //결제 레이아웃
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4"
+                    android:orientation="horizontal">
+
+                    //공백
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="6"></LinearLayout>
+
+                    //결제버튼 레이아웃
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:background="@drawable/button_back"
+                        android:layout_margin="5dp">
+
+                        //결제버튼
+
+                        <Button
+                            android:id="@+id/btnBoardCredit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="결제"
+                            android:background="@null"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                //댓글입력 레이아웃
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4"
+                    android:orientation="horizontal">
+
+                    //댓글입력
+
+                    <EditText
+                        android:id="@+id/edtBoardRepleWrite"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="6"></EditText>
+
+                    //전송버튼 레이아웃
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:background="@drawable/button_back"
+                        android:layout_margin="5dp">
+
+                        //전송버튼
+
+                        <Button
+                            android:id="@+id/btnBoardRepleSend"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="댓글달기"
+                            android:background="@null"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                //댓글들 레이아웃, 리스트뷰
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cds"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4">
+
+                <ListView
+                    android:id="@+id/lvLocalBoard_bf"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none"></ListView>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
